@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const UseStateCounter = () => {
   const [value, setValue] = useState(0);
   const increaseHandler = () => {
-    setValue(value + 1);
+    setValue((prevState) => prevState + 1);
   };
   const resetHandler = () => {
     setValue(0);
